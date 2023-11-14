@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: hsla(298, 68%, 90%, 1);
+
+background: #14213d;
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+
+.todo-app h1 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h1 img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #fff;
+    border: 2px black solid;
+    color: #03045e;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+    background: #14213d;
+    color: #fff;
+}
+
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Style the ::before pseudo-element of list items in unordered lists */
+ul li::before {
+    /* Empty content to create a visual element */
+    content: '';
+
+    /* Position the visual element absolutely within its containing element */
+    position: absolute;
+
+    /* Set the height and width to create a square shape */
+    height: 28px;
+    width: 28px;
+
+    /* Make the visual element circular */
+    border-radius: 50%;
+
+    /* Set the background image to 'uncheck.png' */
+    background-image: url(image/uncheck.png);
+
+    /* Ensure the background image covers the entire visual element */
+    background-size: cover;
+
+    /* Center the background image within the visual element */
+    background-position: center;
+
+    /* Position the visual element 12 pixels from the top and 8 pixels from the left */
+    top: 12px;
+    left: 8px;
+}
+
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(image/check.png);
+}
+
+/* Selects <span> elements that are descendants of <li> elements within a <ul> element */
+ul li span {
+    /* Sets the position property to absolute, positioning the element relative to its closest positioned ancestor */
+    position: absolute;
+
+    /* Aligns the right edge of the element with the right edge of its containing element */
+    right: 0;
+
+    /* Sets the distance between the top edge of the element and the top edge of its containing element */
+    top: 5px;
+
+    /* Sets the width of the element to 40 pixels */
+    width: 40px;
+
+    /* Sets the height of the element to 40 pixels */
+    height: 40px;
+
+    /* Sets the font size of the text content within the element to 18 pixels */
+    font-size: 18px;
+
+    /* Sets the color of the text content within the element to #555 (a shade of gray) */
+    color: #555;
+
+    /* Sets the line height, which is the height of a line of text, to 40 pixels */
+    line-height: 40px;
+
+    /* Aligns the text content within the element to the center */
+    text-align: center;
+
+    /* Sets the border radius, creating rounded corners, to 50%, making a circular shape */
+    border-radius: 50%;
+}
+
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+.text-red {
+    color: red; 
+}
